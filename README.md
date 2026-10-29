@@ -246,10 +246,15 @@ Abaixo estão as medidas de prevenção implementadas e disponibilizadas na past
 ├── wordlists/                      # Dicionários didáticos de teste
 │   ├── users_sample.txt            # Lista demonstrativa de usuários de lab
 │   └── passwords_sample.txt        # Amostra de senhas comuns de conformidade
-└── defense/                        # Configurações reais de mitigação (Blue Team)
-    ├── fail2ban_vsftpd.local       # Proteção com ban de IP para FTP
-    ├── pam_faillock.conf           # Bloqueio de contas em nível de PAM Linux
-    └── nginx_rate_limit.conf       # Rate limiting para proteção do DVWA / Login
+├── defense/                        # Configurações reais de mitigação (Blue Team)
+│   ├── fail2ban_vsftpd.local       # Proteção com ban de IP para FTP
+│   ├── pam_faillock.conf           # Bloqueio de contas em nível de PAM Linux
+│   └── nginx_rate_limit.conf       # Rate limiting para proteção do DVWA / Login
+└── analise-defensiva-malwares/     # Módulo DIO: Análise e Engenharia de Detecção de Ameaças
+    ├── README.md                   # Documentação do estudo defensivo (MITRE, YARA, Sysmon)
+    ├── scripts/fim_defensivo.py    # Monitor de Integridade de Arquivos (FIM) em Python
+    ├── rules/yara_detect.yar       # Regras YARA para identificação de assinaturas
+    └── detection/sysmon_rules_example.xml # Configuração de telemetria Windows Sysmon
 ```
 
 ---
