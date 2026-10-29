@@ -246,12 +246,10 @@ Abaixo estão as medidas de prevenção implementadas e disponibilizadas na past
 ├── wordlists/                      # Dicionários didáticos de teste
 │   ├── users_sample.txt            # Lista demonstrativa de usuários de lab
 │   └── passwords_sample.txt        # Amostra de senhas comuns de conformidade
-├── defense/                        # Configurações reais de mitigação (Blue Team)
-│   ├── fail2ban_vsftpd.local       # Proteção com ban de IP para FTP
-│   ├── pam_faillock.conf           # Bloqueio de contas em nível de PAM Linux
-│   └── nginx_rate_limit.conf       # Rate limiting para proteção do DVWA / Login
-└── images/                         # Evidências e capturas de tela do laboratório
-    └── .gitkeep                    # Preserva a pasta no versionamento Git
+└── defense/                        # Configurações reais de mitigação (Blue Team)
+    ├── fail2ban_vsftpd.local       # Proteção com ban de IP para FTP
+    ├── pam_faillock.conf           # Bloqueio de contas em nível de PAM Linux
+    └── nginx_rate_limit.conf       # Rate limiting para proteção do DVWA / Login
 ```
 
 ---
@@ -268,8 +266,8 @@ Abaixo estão as medidas de prevenção implementadas e disponibilizadas na past
 3. **Execução das Auditorias**:
    - Utilize as wordlists disponíveis em [`wordlists/`](./wordlists/) ou utilize seleções do `/usr/share/wordlists/`.
    - Execute os comandos descritos na [Seção 4](#4-metodologia-e-cenários-de-teste).
-4. **Coleta de Evidências**:
-   - Salve os prints das execuções e armazene na pasta [`images/`](./images/) referenciando-os neste README.
+4. **Validação e Auditoria**:
+   - Analise as respostas do terminal e logs de autenticação do alvo (`/var/log/auth.log` e `/var/log/vsftpd.log`) para validação dos acessos.
 
 ---
 
