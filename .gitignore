@@ -1,0 +1,17 @@
+# Git configuration
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Virtual Machines & Disks (caso o aluno coloque arquivos de VM na pasta por engano)
+*.vdi
+*.vbox
+*.vbox-prev
+*.ova
+*.ovf
+
+# Sensitive data / large wordlists (nunca versionar rockyou.txt completa no git)
+wordlists/*.gz
+wordlists/rockyou.txt
+wordlists/*_custom_huge.txt

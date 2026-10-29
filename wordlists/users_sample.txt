@@ -1,0 +1,11 @@
+# Lista de usuários para testes em laboratório (Metasploitable / DVWA / Linux Lab)
+admin
+msfadmin
+user
+service
+test
+guest
+root
+postgres
+sys
+backup

@@ -1,0 +1,17 @@
+# Exemplo de configuração de proteção contra Força Bruta para vsftpd
+# Arquivo: /etc/fail2ban/jail.d/vsftpd.local
+
+[vsftpd]
+enabled  = true
+port     = ftp,ftp-data,ftps,ftps-data
+filter   = vsftpd
+logpath  = /var/log/vsftpd.log
+maxretry = 3
+findtime = 600
+bantime  = 3600
+action   = iptables-multiport[name=vsftpd, port="ftp,ftp-data,ftps,ftps-data", protocol=tcp]
+
+# Explicação dos parâmetros:
+# - maxretry = 3: Bloqueia o IP após 3 tentativas inválidas consecutivas.
+# - findtime = 600: Janela de tempo de 10 minutos (600s) para contabilizar as tentativas.
+# - bantime = 3600: O IP atacante fica banido por 1 hora (3600s).
